@@ -1,0 +1,685 @@
+:root{
+    --myblue:rgb(12, 75, 2);
+    --mytransblue:rgba(12, 75, 2,0.8);
+    --mycyan:rgb(16, 235, 56);
+    --mywhite:white;
+    --myfont:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.hambuger{
+    display:none;
+}
+.cancel {
+    display: none;
+}
+#mydots{
+    height:9%;
+    background-color: var(--mytransblue);
+    position:fixed;
+    right:5%;
+    top:10%;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor: pointer;
+
+    
+}
+.thedot{
+    display: flex;
+    border:1px solid var(--mycyan);
+    font-weight:bold;
+    font-size:30px;
+    justify-content:center;
+    align-items: center;
+    height:50px;    
+    /* white-space:nowrap; */
+    border-radius:50px;
+    padding-bottom:15%;
+    margin-bottom:5px; 
+    user-select: none;
+    
+    
+}
+.other{
+    display: flex;
+    border:1px solid var(--mycyan);
+    font-weight:bold;
+    justify-content:center;
+    align-items: center;
+    height:50px;
+    border-radius:50px;
+    white-space:nowrap;
+    padding-bottom:15%; 
+    color:rgb(248, 226, 49);
+}
+.mymenus{
+    background-color:var(--myblue);
+    display:flex;
+    color:var(--mycyan);
+    height: 60px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:2;
+}
+#sec1{
+    width:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid red; */
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo p{
+    text-transform:uppercase;
+    font-family:var(--myfont);
+}
+
+#sec1 img{
+    width:50px;
+    height:50px;
+}
+
+#sec2{
+    width:85%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    /* border:1px solid red; */
+
+}
+.menus{
+    background:linear-gradient( var(--myblue)50%,var(--mycyan)50%);
+    background-size:100% 200%;
+    background-position: 0 0;
+    cursor: pointer;
+    width:15%;
+    display: flex;
+    justify-content: center;
+    height:50%;
+    align-items:center;
+    text-transform:uppercase;
+    border-bottom:1px solid var(--mycyan);
+    font-family:var(--myfont);
+}
+.menus:hover{
+    background-position: 0 100%;
+    transition:0.5s;
+    color:var(--myblue);
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+
+    
+}
+.sect{
+    background-color: var(--mycyan);
+    height:100vh;
+    border:1px solid red; 
+}
+
+.myanime{
+    animation: ani 1s;
+    
+  }
+  @keyframes ani{
+  from{transform:scaleY(0.5)}
+   to{transform:scaleY(1)}
+  }
+
+  .sect1{
+    margin-top:50px;
+    background: url('/image/nacoslogo.png'),var(--mycyan);
+    background-size:auto;
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  .greetings{
+    width:50%;
+    margin: 200px auto;
+    text-align: center;
+    animation: greet 0.9s ease-in; 
+    box-shadow: 0 0 10px 5px var(--mytransblue);
+    padding:20px 10px;
+    font-family:var(--myfont);
+    color:var(--myblue);
+    background-color:rgb(225,225,225,0.5);/*var(--mytransblue);*/
+    
+    
+  }
+  .welcome{
+    /* display:block; */
+    scale:0;
+    animation: forwelcome 2s ease forwards 1s;
+    text-transform: uppercase;
+    font-size:20px;
+    font-weight:bold;
+  }
+  .to{
+      /* display:block; */
+      scale:0;
+      animation: forto 2s ease 2s forwards;
+      text-transform: uppercase;
+      font-weight:bold;
+
+  }
+  .swd{
+      width:0%;
+      text-wrap:nowrap;
+      overflow:hidden;
+      animation:forswd forwards 2s ease 4s;
+      border-right:1px solid red;
+      margin-left:11%;
+      text-transform: uppercase;
+      font-weight:900;
+      font-size:30px;
+
+
+  }
+  .greetings button{
+    background-color:var(--myblue);
+    color:var(--mywhite);
+    padding:5px 10px;
+    border-radius:10px;
+  }
+.subheadings{
+    text-align: center;
+    color:rgb(139, 10, 26);
+    text-transform: uppercase;
+
+}
+.aboutdiv{
+    margin:10px auto;
+    background:var(--mywhite);
+    width:50%;
+    padding:10px 8px;
+    line-height: 25px;
+    border-radius:5px;
+}
+.aboutdiv:hover h2{
+    text-decoration:underline;
+    color:rgb(139, 10, 26);
+    transition: .7s;
+}
+.aboutdiv h2{
+    text-align: center;
+}
+.aboutdiv p{
+    font-family:'Times New Roman', Times, serif;
+    text-align:justify;
+}
+  
+  @keyframes greet{
+     from {margin-top:-300px}
+     to{margin-top: 200px;}
+  }
+
+  @keyframes forwelcome{
+    from{scale:0;}
+    to{scale:1;}
+  }
+  @keyframes forto{
+    from{scale:0;}
+    to{scale:1;}
+  }
+  @keyframes forswd{
+     from{width:0%;}
+     to{width:80.3%; border-right:none;}
+  }
+.mybtndiv{
+  text-align: center;
+}
+.mybtndiv button{
+   margin: 30px auto;
+   padding: 10px;
+   border-radius:5px;
+   border:none;
+   font-size:20px;
+   color:var(--myblue);
+   background:white;
+}
+.mybtndiv button:hover{
+  cursor: pointer;
+
+}
+.board{
+  width:60%;
+  border: 1px solid var(--myblue);
+  margin: 20px auto;
+  border-radius: 20px 20px 0 0;
+ background: var(--mywhite);
+}
+.board .thehead{
+   height:20vh;
+  border: 1px solid var(--myblue);
+  border-radius: 20px 20px 0 0;
+  background: rgb(139, 10, 26);
+  display: flex;
+  align-items:center;
+}
+.thehead .myr{
+   width:30%;
+}
+.thehead .myr img{
+  width:50%;
+  height:10vh;
+
+
+}
+
+.thehead .myl{
+width:65%;
+border-left:3px solid var(--mywhite);
+padding:0 15px;
+}
+.thehead .myl h1{
+  font-family:cursive;
+  color:var(--mywhite);
+  font-size:35px;
+
+  
+   
+}
+
+.board .thebody{
+   height:50vh;
+  border: 1px solid var(--myblue);
+  overflow:auto;
+  padding:5px 15px;
+  text-align: justify;
+  
+}
+.board .thebody h1{
+   text-align: center;
+   text-transform: uppercase;
+}
+.thenacos{
+  margin-top:50px;
+  height:20vh;
+  position:relative;
+  background:url('/image/nacosimage.jpeg');
+  background-size:100% 100%;
+}
+.thenacos div{
+  position:absolute;
+  width:100%;
+  height:20vh;
+  background:black;
+  opacity:0.5;
+}
+.thenacos h1{
+  color:white;
+  font-size: 50px;
+  text-align: center;
+}
+.ecma{
+  text-align: center;
+ color:rgb(139, 10, 26);
+}
+.team_meet{
+ color:var(--myblue);
+ text-align: center;
+}
+.cl25{
+  text-align: center;
+}
+/** ##############for carousel############### **/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 60%;
+  position: relative;
+  margin: auto;
+  height:60vh;
+  border:5px solid rgb(139, 10, 26);
+  border-radius: 10px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+.mySlides img{
+    width:100%;
+    height:60vh;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.myfaq{
+  margin: 0px auto;
+  width:80%;
+  border-radius:10px;
+  background:var(--mywhite);
+  border:1px solid var(--myblue);
+  
+}
+.thefaq{
+  height: 60px;
+  overflow:hidden;
+  cursor: pointer;
+  border:1px solid var(--myblue);
+  padding:2px 10px;
+}
+.thefaq h1{
+  color:var(--myblue);
+  
+}
+.myfaq > h1{
+  color:var(--myblue);
+  padding:2px 10px;
+}
+.sect5{
+  padding:0 10px;
+  overflow:auto;
+}
+
+.cwuo{
+  text-align: center;
+}
+.connect{
+  text-align: center;
+}
+footer{
+  background:var(--myblue);
+  color:var(--mywhite);
+  height:27.5vh;
+  text-align: center;
+}
+.excos_gallery{
+  display:flex;
+  flex-wrap:wrap;
+  /* align-items:center; */
+  justify-content:center;
+}
+.exc{
+  width:30%;
+  height:35vh;
+  border:1px solid rgb(12, 75, 2);
+  margin:10px;
+  border-radius:10px;
+
+}
+.imgdiv{
+  width:100%;
+  height:70%;
+  border:1px solid green;
+ border-radius: 10px;
+ text-align: center;
+ background-color: #bbb;
+}
+.imgdiv img{
+ width:80%;
+ height:100%;
+ /* object-fit: cover; */
+ /* object-position: 4% 4%; */
+ border-radius: 10px;
+ 
+
+}
+.post{
+  font-size:25px;
+  padding:5px;
+  margin:5px;
+  text-align: center;
+  color:rgb(12, 75, 2)
+}
+.pname{
+  font-size:15px;
+  padding:0;
+  margin:0;
+  text-align: center;
+  color:rgb(139, 10, 26)
+}
+
+/** ############## ending for carousel############### **/
+@media screen and (max-width:450px){
+    body{
+        background-color:white;
+    }
+
+    
+    .hambuger{
+        display:block;
+        position: absolute;
+        color:var(--mycyan);
+        font-size:30px;
+        top:15%;
+        left:3%;
+
+        
+    }
+    .cancel {
+        position: absolute;
+        /* display: block; */
+        color:var(--mycyan);
+        font-size:30px;
+        top:15%;
+        left:3%;
+        
+
+
+
+    }
+    #mydots{
+        height:9%;
+        background-color: var(--mytransblue);
+        position:fixed;
+        right:5%;
+        top:1%;
+        overflow:hidden;
+        white-space:nowrap;
+        cursor: pointer;
+        width: 40px;    
+    }
+    .thedot{
+        display: flex;
+        border:1px solid var(--mycyan);
+        font-weight:bold;
+        font-size:20px;
+        justify-content:center;
+        align-items: center;
+        height:50px;    
+        /* white-space:nowrap; */
+        border-radius:50px;
+        padding-bottom:15%;
+        margin-bottom:5px; 
+        user-select: none;
+        
+        
+    }
+    .other{
+        display: flex;
+        border:1px solid var(--mycyan);
+        font-weight:bold;
+        justify-content:center;
+        align-items: center;
+        height:50px;
+        border-radius:50px;
+        white-space:nowrap;
+        padding-bottom:15%; 
+    }
+
+ #sec1{
+    /* border:1px solid red; */
+    width:100%;
+
+ }
+ .aboutdiv{
+    margin:10px auto;
+    background:var(--mywhite);
+    width:90%;
+    line-height: 20px;
+}
+ #sec2{
+    position:absolute;
+    flex-direction:column;
+    height:100%;
+    top:60px;
+    width:0%;
+    background:var(--mytransblue);
+    overflow:hidden;
+    white-space: nowrap;
+    height:100vh;
+
+    
+ }
+ .menus{
+    width:50%;
+    height:10%;
+ }
+
+ .greetings{
+    width:90%;
+    padding:15px 3px;
+    
+}
+
+.swd{
+    margin-left:1.2%;
+    font-size:25px;
+    
+}
+.to{
+    font-weight: bold;
+}
+.welcome{
+    font-weight: bold;
+}
+
+   @keyframes forswd{
+    from{width:0%;}
+    to{width:98%; border-right:none;}
+ }
+
+ .slideshow-container {
+  max-width: 90%;
+  height:60vh;
+}
+.board{
+  width:90%;
+}
+.thehead .myl h1{
+  font-size:25px;
+}
+.thehead .myl{
+  border-left:3px solid var(--mywhite);
+  padding:0px 5px;
+}
+.myfaq{
+  width:100%;
+}
+.thefaq h1{
+  font-size:15px;
+}
+.thefaq{
+  height: 60px;
+  overflow:hidden;
+  cursor: pointer;
+  /* border:10px solid var(--mywhite); */
+  border:10px solid rgb(12, 75, 2);
+  padding:2px 10px;
+}
+
+.excos_gallery{
+   flex-direction:column;
+   align-items:center;
+}
+.exc{
+  width:90%;
+}
+.thenacos h1{
+  font-size: 40px;
+}
+
+
+}
