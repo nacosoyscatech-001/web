@@ -1,6 +1,7 @@
 // alert("Thsi application was created by Daud Abdul-Gafar Olamilekan")
 function openham(){
     document.getElementById("sec2").style.width='100%';
+    document.getElementById('sec2').style.height='95vh';
     document.getElementById("sec2").style.transition='0.5s';
     document.getElementById("ham").style.display="none";
     document.getElementById("cancel").style.display='block';
@@ -33,6 +34,7 @@ function closeham(){
 //  ***** solution1
 window.onload = ()=>{
   thedots.style.height='9%';
+  hidedots();
   
 }
 // for the dots  ***** problem1
@@ -153,7 +155,9 @@ function gotoabout(){
 }
 
 
-
+function goabout(){
+  window.location.href='#course';
+}
 
 function gotoexco(){
   location.href='nacosexco.html'
