@@ -1,156 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale = 1.0">
-<title>OYSCATECH SWD HND1 Platform</title>
-<link rel="stylesheet" href="css/style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACOS Oyscatech - National Association of Computing Students</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 <body>
-<!--Created By Daud Abdul-Gafar Olamilekan-->
-<header>
-<nav>
-    <input type="text" id="switch" hidden value="first">
-    <div class="mymenus">
-        <div class="hambuger" onclick="openham()" id="ham">☰</div>
-        <div class="cancel" onclick="closeham()" id="cancel"> &times;  </div>
-        <div class="mydots" ondblclick="hidedots()" id="mydots">
-           <div class="thedot" id="thedot"  >...</div>
-           <div class="other" onclick="changer()">switch</div>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                    <!-- <i class="fas fa-graduation-cap"></i> -->
+                     <img src="assets/images/oyscatech_logo.png" alt="oyscatech logo">
+                     <img src="assets/images/nacos_logo.png" alt="nacos logo">
+
+                    <span>NACOS</span>
+                    <sub>Oyscatech</sub>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="excos.html" class="nav-link">Our Excos</a></li>
+                    <li><a href="#events" class="nav-link">Events</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="menusec" id="sec1">
-        <div class='logo'> <img src="image/oyscatech_logo.png" alt="oyscatech_logo"> <p>Oyscatech</p>
+    </nav>
+    
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <!-- <div class="stars"></div> -->
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Welcome to <span class="gradient-text">NACOS</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        National Association of Computing Students<br>
+                        <span class="highlight">Oyscatech Chapter</span>
+                    </p>
+                    <h2 class="team_name">TEAM <span>ECMA</span></h2>
+                    <p class="hero-description">
+                        A dynamic academic community dedicated to excellence in computing education, professional development, and innovation. NACOS Oyscatech Igboora chapter portrays this through  our team name <span>(ECMA)</span> which means E- Empowerment, C- Creativity, M- Movement A- Advancement 
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-primary">Learn More</a>
+                        <a href="excos.html" class="btn btn-secondary">Meet Our Excos</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="floating-element">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-element element-2">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="floating-element element-3">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-     <div class="menusec" id="sec2">
-         <div class="menus" onclick='gotohome(),gotoh1()' id="menu1">home</div>
-         <div class="menus" onclick="gotocourse()" id="menu2">About</div>
-         <div class="menus" onclick="gotolectures()" id="menu3">Meet the Excos</div>
-         <div class="menus" onclick="gotogpcal()" id="menu4">INFO</div>
-         <div class="menus" onclick="gotoabout()" id="menu5">contact</div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About <span class="gradient-text">NACOS</span></h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-target"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>
+                        To foster professional development and academic excellence in computing while building a supportive community of students dedicated to innovation and technological advancement.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>
+                        To be the leading computing student association, recognized for developing skilled professionals who contribute positively to the tech industry and society.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>
+                        Excellence, Integrity, Collaboration, Innovation, and Continuous Learning. We believe in empowering students to achieve their full potential.
+                    </p>
+                </div>
+            </div>
         </div>
-     </div>
-</nav>
-</header>
-<section class="sect sect1" id="home">
+    </section>
 
-
-<div class="greetings">
-    <p class="welcome">Welcome</p> 
-    <p class="to">to</p>
-    <p class="swd">NACOS OYSCATECH CHAPTER</p>
-    <button onclick="goabout()">click here to proceed</button>
-</div>
-
-</section>
-
-<section class="sect sect2 " id="course">
- <h1 class="subheadings">About</h1>
- <div class="aboutdiv">
-    <h2> Nacos Oyscatech chapter</h2>
-    <p>Welcome to NACOS OYSCATECH Chapter. we are dynamic and vibrant student organiztion dedicated to promoting the interest of computing students and fostering a community of innovative thinkers, problem solvers and tech enthusiasts</p>
-    </div>
- <div class="aboutdiv">
-    <h2>Our Mission</h2>
-    <p>As a NACOSITE, our misson is to empower our fellow student with the skills ,knowledge, and guide them to Advancement in their careers pursuits through the right movement needed to succeed in rapid growing tech Industry.  </p>
-   </div>
-    </div>
- <div class="aboutdiv">
-   <h2>How you can support</h2>
-   <p>As a student of OYSCATECH in the department of computer science, or any other field such as Software and Web Development,Networking and Cloud Computing we urge you to believe,support and embrace this organization.because, together we can achieve greatness. </p>
-   </div>
-</section>
-
-<section class="sect sect3" id="lecturer">
- <h1 class="subheadings">OYSCATECH NACOS EXCOS</h1>
- <div class="caroseldiv">
-  <!-- Slideshow container -->
-<div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="image/techempowers.jpg" style="width:100%">
-    <div class="text">Empowering Youger generation</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="image/advancecomputing.jpg" style="width:100%">
-    <div class="text">Toward Advanced Computing</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img src="image/techgrateness.jpg" style="width:100%">
-    <div class="text">Together we Can achieve Greatness</div>
-  </div>
-
-  <!-- Next and pvious buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
- </div>
- <div class="mybtndiv">
-    <button onclick="gotoexco()">Click here to  see the excos</button>
- </div>
-</section>
-
-<section class="sect sect4" id="gpcal">
-    <h1 class="subheadings">NACOS INFORMATION BOARD</h1>
-    <div class="board">
-      <div class="thehead">
-        <div class="myr">
-          <img src="image/oyscatech_logo.png" alt="oycatech logo"><img src="image/nacoslogo.png" alt=" nacos logo ">
+    <!-- Why Join Section -->
+    <section class="why-join">
+        <div class="container">
+            <h2 class="section-title">Why Join <span class="gradient-text">NACOS</span>?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <div class="benefit-number">01</div>
+                    <h3>Networking</h3>
+                    <p>Connect with like-minded computing students and professionals in the tech industry.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">02</div>
+                    <h3>Workshops & Training</h3>
+                    <p>Access exclusive workshops on latest technologies and industry trends.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">03</div>
+                    <h3>Career Opportunities</h3>
+                    <p>Gain internship and job opportunities through our industry connections.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">04</div>
+                    <h3>Mentorship</h3>
+                    <p>Learn from experienced professionals and senior members in the community.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">05</div>
+                    <h3>Projects & Competitions</h3>
+                    <p>Participate in exciting coding competitions and collaborative projects.</p>
+                </div>
+                <div class="benefit-item">
+                    <div class="benefit-number">06</div>
+                    <h3>Leadership Experience</h3>
+                    <p>Develop leadership skills by taking active roles in club activities.</p>
+                </div>
+            </div>
         </div>
-        <div class="myl">
-          <h1>NACOS Oyscatech Chapter</h1>
-          
-        </div>
-      </div>
-      <div class="thebody">
-        <h1>Notification of Meeting</h1>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui maiores itaque rerum iste quasi laborum fugit laboriosam possimus magnam voluptatum? Praesentium facere ad officiis corrupti tenetur atque perferendis voluptatem quam, esse harum labore molestiae amet. Qui nostrum quam in, ullam cum obcaecati, et asperiores delectus, perspiciatis dolores autem voluptatibus earum nihil vitae minima consequatur nam incidunt ex culpa. Quasi, ullam. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio consequuntur veniam soluta odio minima nostrum et repellendus consequatur fugit ducimus neque ad itaque cumque eius, ullam incidunt. Eius aliquam maxime inventore aspernatur iure voluptate repellat, laudantium dignissimos unde qui velit reiciendis cum dolorem quae deleniti soluta excepturi veritatis aut modi! Deleniti provident voluptatibus temporibus non dignissimos dolor ipsa repellendus rephenderit soluta quis at, quae minima voluptas odit! Temporibus necessitatibus id est recusandae rerum. Neque odit iste quae laboriosam quos voluptatibus sunt. A debitis eaque eius odio aspernatur delectus suscipit. Adipisci mollitia distinctio voluptas, nam provident nemo hic incidunt alias autem? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima vel earum quisquam assumenda ipsam saepe? Incidunt odit voluptates dolore laudantium explicabo! Id repellat incidunt aliquam consectetur tempore sit rerum laudantium repellendus. Maxime ipsum error, eos inventore magni nulla corrupti quam velit eaque esse dolore animi expedita, provident eligendi laboriosam vitae ea? Eius maxime, voluptatum hic quam voluptatem recusandae quidem nostrum architecto enim eveniet natus blanditiis facere fugiat doloribus iste illum ex. Perferendis, eaque repudiandae adipisci velit sed vero, incidunt aperiam non officiis iste, cum eius! Voluptates optio fuga, tempora laboriosam explicabo odio totam culpa, aliquid rem tenetur possimus inventore impedit?
-      </div>
-    </div>
- 
-</section>
+    </section>
 
-<section class="sect sect5" id="about">
-    <h1 class="subheadings">contact</h1>
-    <div class="myfaq">
-    <h1>FAQ</h1>
-    <div class="thefaq faq1">
-      <h1 id="faq1">What is NACOS <span class="arrnav">&downarrow;</span></h1>
-      <p>NACOS (National Association of Computing Students) is the official representative and umbrella body for all students studying computer science and related fields. Membership is inclusive for everyone in these disciplines.
-. </p>
-    </div>
-    <div class="thefaq faq2">
-      <h1 id="faq2">why is it so important to be a NACOS member <span class="arrnav">&downarrow;</span> </h1>
-      <p>It is highly important for students studying computer science to join this association. Beyond automatic eligibility based on your field of study, becoming a member grants you access to numerous exclusive opportunities and benefits provided by the association. </p>
-    </div>
-    <div class="thefaq faq3">
-      <h1 id="faq3">When was NACOS founded  <span class="arrnav">&downarrow;</span></h1>
-      <p>The National Association of Computing Students was founded in July 1993 as the Nigeria Assosiation of Computer Science Students(NACOSS) later changing  its name and scope to NACOS in 2020 .</p>
-    </div>
-    </div>
-     <h2 class="cwuo">connect with us on</h2>
-     <div class="connect">
-      <a href="#blank"><img src="image/whatapp.png" width="50" height="50" alt="WhatsApp"></a> <a href="#blank"><img src="image/gmail.png"  alt="gmail" width="50" height="50"></a>
-     </div>    
-     <footer>
-      <h1>for Inquiry|Sponsorship call:</h1>
-      <h2>08107307544,09063527482</h2>
-        &copy; created at 2025 NACOS OYSCATECH
-     </footer>
-</section>
+    <!-- Events Section -->
+    <section class="events" id="events">
+        <div class="container">
+            <h2 class="section-title">Nacos <span class="gradient-text">Events</span></h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Jan</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>NACOS first meeting</h3>
+                        <p>TEAM ECMA had the first meeting with the student of NACOS and giving them tips on how they can excel in 
+                            their academic pusrsuits
+                        </p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> shed 1</span>
+                            <span><i class="fas fa-clock"></i> 1:00 PM - 2:00 PM</span>
+                        </div>
+                        <a href="javascript:void(0)" class="btn btn-small">done</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">13</span>
+                        <span class="month">Feb</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>Crypto and Web 3 Enligthment Training</h3>
+                        <p>Student were trained on how Web3 and crypto currency works this was coordinated by Comr Timmy SUG PRO 2 </p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Hall 2</span>
+                            <span><i class="fas fa-clock"></i> 10:00 AM - 1:00 PM</span>
+                        </div>
+                        <a href="javascript:void(0)" class="btn btn-small">done</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">28</span>
+                        <span class="month">Feb</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>NACOS Orientation Day</h3>
+                        <p>This program was organized by TEAM ECMA to ensure that all student were enligthen on how they 
+                            can excel in their academic journey and also the career opputunities in their field of study
+                        </p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Tetfund Building A1</span>
+                            <span><i class="fas fa-clock"></i> 11:00 AM - 2:00PM</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Done</a>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">June</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>2 days Bootcamp NACOS AI and Automation training</h3>
+                        <p> <b>Day 1</b> Discover the future of AI and explore exciting opportunities in machine learning.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Tetfund1</span>
+                            <span><i class="fas fa-clock"></i> 10:00 AM</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Upcoming</a>
+                    </div>
+                </div>
+
+  <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">16</span>
+                        <span class="month">June</span>
+                    </div>
+                    <div class="event-content">
+                        <h3>2 days Bootcamp NACOS AI and Automation training</h3>
+                        <p> <b>Day 2</b> Discover the future of AI and explore exciting opportunities in machine learning.</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Tetfund1</span>
+                            <span><i class="fas fa-clock"></i> 10:00 AM</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Upcoming</a>
+                    </div>
+                </div>
+                  <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">June</span>
+                    </div>
+
+
+                    <div class="event-content">
+                        <h3>NACOS Electroral Commission Screening</h3>
+                        <p> <b>Day 1</b> A committe formed to bring together the new Nacos leadership for set 2026/27</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> To be decided</span>
+                            <span><i class="fas fa-clock"></i> to be decided</span>
+                        </div>
+                        <a href="#" class="btn btn-small">Upcoming</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="300">0</div>
+                <div class="stat-label">Active Members</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="5">0</div>
+                <div class="stat-label">Events Hosted</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="1000">0</div>
+                <div class="stat-label">Lives Impacted</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="10">0</div>
+                <div class="stat-label">Years of Excellence</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p class="info-label">Email</p>
+                            <a href="mailto:nacosoyscatech@gmail.com">nacosoyscatech@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p class="info-label">Phone</p>
+                            <a href="tel:+234901234567">+234 8107307544</a>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p class="info-label">Location</p>
+                            <p>OYSCATECH,Igboora, Oyo State, Nigeria</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="hidden" name="_next" value="daudgafar01@gmail.com">
+  <input type="hidden" name="_captcha" value="false">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                </form>
+                <div hidden id="result"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="currentdate"></span> NACOS Oyscatech Chapter. All rights reserved.</p>
+            <p>Dedicated to excellence in computing education</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
 </body>
-<script src="js/myjs.js"></script>
 </html>
-
