@@ -175,6 +175,7 @@ body {
     line-height: 1.2;
     margin-bottom: 1rem;
     font-weight: 800;
+    color:blue;
 }
 
 .gradient-text {
@@ -516,7 +517,7 @@ body {
 /* ===== STATS SECTION ===== */
 .stats {
     padding: 80px 0;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--light-bg), var(--light-bg));
     color: white;
 }
 
@@ -536,16 +537,18 @@ body {
     font-size: 3rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
+    color:yellow;
 }
 
 .stat-label {
     font-size: 1.1rem;
     opacity: 0.9;
+    
 }
 
 /* ===== EXCOS SECTION ===== */
 .excos-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--light-bg), var(--light-bg));
     color: white;
     padding: 80px 0;
     text-align: center;
