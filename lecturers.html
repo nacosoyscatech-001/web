@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Lecturers - NACOS Oyscatech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel ="icon" href="assets/images/excos/allexco.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="logo">
+                     <img src="assets/images/oyscatech_logo.png" alt="oyscatech logo">
+                     <img src="assets/images/nacos_logo.png" alt="nacos logo">
+
+                    <span>NACOS</span>
+                    <sub>Oyscatech</sub>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link" onclick="gotoabout()">About</a></li>
+                    <li><a href="excos.html" class="nav-link">Our Excos</a></li>
+                    <li><a href="lecturers.html" class="nav-link active">Lecturers</a></li>
+                    <li><a href="index.html#events" class="nav-link" onclick="window.location.href='index.html#events'">Events</a></li>
+                    <li><a href="index.html#contact" class="nav-link" onclick="window.location.href='index.html#contact'">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lecturers Hero -->
+    <section class="excos-hero">
+        <div class="container">
+            <h1 class="hero-title">Meet Our <span class="gradient-text">Lecturers</span></h1>
+            <p class="hero-subtitle">Experienced lecturers and industry professionals supporting NACOS students</p>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <input id="excoSearch" class="search-input" type="search" placeholder="Search by name or department">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="cs">Computer Science</button>
+                    <button class="filter-btn" data-filter="sw">Software</button>
+                    <button class="filter-btn" data-filter="it">IT</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lecturers Grid -->
+    <section class="excos-section">
+        <div class="container">
+            <div class="excos-grid">
+                 <!-- Dr adeola -->
+                <div class="exco-card" data-position="cs">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                          <img src="assets/images/excos/Dr adeola.png" alt="Dr. Adeola" class="exco-img" data-full="assets/images/excos/Dr adeola.png">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="exco-name">Dr. Adeola O.O</h3>
+                        <p class="exco-position">Senior Lecturer</p>
+                        <p class="exco-level">Computer Science Department</p>
+                        <p class="exco-bio">Focuses on Networking, systems design and mentoring students.</p>
+                    </div>
+                </div>
+               <!-- Mr olowookere -->
+                <div class="exco-card" data-position="cs">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                             <img src="assets/images/excos/default.jpeg" alt="Mr.olowookere" class="exco-img" data-full="assets/images/excos/default.jpeg">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="exco-name">Mrs. Olowooker A.S</h3>
+                        <p class="exco-position"> Senior Lecturer</p>
+                        <p class="exco-level">Computer Science Department</p>
+                        <p class="exco-bio">Specialized in System security and Data protection.</p>
+                    </div>
+                </div>
+                    <!-- Mrs Bello -->
+
+                <div class="exco-card" data-position="cs">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                             <img src="assets/images/excos/default.jpeg" alt="Mrs bello" class="exco-img" data-full="assets/images/excos/default.jpeg">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="exco-name">Mrs. Bello G.R</h3>
+                        <p class="exco-position">Senior Lecturer</p>
+                        <p class="exco-level">Computer Science Department</p>
+                        <p class="exco-bio">focuses on Data Structure and Alogrithm and how they can be efficiently implemented in programming languagees.</p>
+                    </div>
+                </div>
+                 
+                       <!-- mrs lateef -->
+                  <div class="exco-card" data-position="it">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                             <img src="assets/images/excos/default.jpeg" alt="Mrs Lateef" class="exco-img" data-full="assets/images/excos/default.jpeg">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="exco-name">Mrs. Lateef</h3>
+                        <p class="exco-position">Lecturer</p>
+                        <p class="exco-level">Computer Science Deparment</p>
+                        <p class="exco-bio">Industry-experienced lecturer in networking and IT infrastructure.</p>
+                    </div>
+                </div>
+                      <!-- mr sikiru -->
+                  <div class="exco-card" data-position="sw">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                             <img src="assets/images/excos/mr sikiru.png" alt="Mr. Sikiru" class="exco-img" data-full="assets/images/excos/mr sikiru.png">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="exco-name">Mr.Sikiru K.</h3>
+                        <p class="exco-position">Lecturer</p>
+                        <p class="exco-level">Software and web Development</p>
+                        <p class="exco-bio">Industry-experienced lecturer in software engineering, web security and IT infrastructure.</p>
+                    </div>
+                </div>
+                 <!-- Mr ojo -->
+                  <div class="exco-card" data-position="sw">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                             <img src="assets/images/excos/mr ojo.png" alt="Mr. Ojo N.A" class="exco-img" data-full="assets/images/excos/mr ojo.png">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="exco-name">Mr. OJO N.A</h3>
+                        <p class="exco-position">Lecturer</p>
+                        <p class="exco-level">Software and web Development</p>
+                        <p class="exco-bio">Specializes in web technologies and practical project supervision</p>
+                    </div>
+                </div>
+
+                   <!-- Mr s.p -->
+                  <div class="exco-card" data-position="it">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                             <img src="assets/images/excos/mr sp.png" alt="Mr. Solomon" class="exco-img" data-full="assets/images/excos/mr sp.png">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="exco-name">Mr. Solomon K.</h3>
+                        <p class="exco-position">Lecturer</p>
+                        <p class="exco-level">Networking and cloud computing</p>
+                        <p class="exco-bio">Industry-experienced lecturer in networking and IT infrastructure.</p>
+                    </div>
+                </div>
+                   <!-- Mr amao -->
+                  <div class="exco-card" data-position="it">
+                    <div class="card-image">
+                        <div class="image-placeholder">
+                             <img src="assets/images/excos/mr amao.png" alt="Mr. Amoa I.K" class="exco-img" data-full="assets/images/excos/mr amao.png">
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="exco-name">Mr. Amao I.K.</h3>
+                        <p class="exco-position">Lecturer</p>
+                        <p class="exco-level">Computer science </p>
+                        <p class="exco-bio">experience in Industrial training, E-commerce, and Embedded systems</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="contact-cta">
+        <div class="container">
+            <h2>Interested in Collaborating?</h2>
+            <p>Contact us to invite lecturers for workshops, seminars or mentorship sessions.</p>
+            <a href="index.html#contact" class="btn btn-primary">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy;  <span id="currentdate"></span>  NACOS Oyscatech Chapter. All rights reserved.</p>
+            <p>Dedicated to excellence in computing education</p>
+        </div>
+    </footer>
+
+    <!-- Image modal for clickable photos -->
+    <div id="imgModal" class="img-modal" aria-hidden="true">
+        <button class="modal-close" id="modalClose" aria-label="Close image">&times;</button>
+        <img id="modalImg" src="" alt="Image">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/excoscript.js"></script>
+</body>
+</html>
