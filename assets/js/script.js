@@ -368,61 +368,114 @@ let currentdate = new Date().getFullYear()
 document.getElementById('currentdate').innerText = currentdate;
 
 // for contact form
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+        let formData = new FormData(this);
 
-  let formData = new FormData(this);
-//5026988cbbb5aae8403aad8c589321d4
-//https://formsubmit.co/daudgafar01@gmail.com
-  fetch("https://formsubmit.co/5026988cbbb5aae8403aad8c589321d4", {
-    method: "POST",
-    body: formData
-  })
-  .then(response => {
-    if (response.ok) {
-        const submitBtn = contactForm.querySelector('button');
-            const originalText = submitBtn.textContent;
-            
-            submitBtn.textContent = '✓ Message Sent Successfully!';
-            submitBtn.style.background = '#10b981';
-              // Restore button after 3 seconds
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.background = '';
-            }, 3000);
-      document.getElementById("result").innerHTML = "Message sent successfully!";
-      this.reset();
-    } else {
-        const submitBtn = contactForm.querySelector('button');
-            const originalText = submitBtn.textContent;
-            
-            submitBtn.textContent = '✓ errror sending the message';
-            submitBtn.style.background = '#ee2626';
-              // Restore button after 3 seconds
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.background = '';
-            }, 3000);
-      document.getElementById("result").innerHTML = "Error sending message.";
-    }
-  })
-  .catch(error => {
-    document.getElementById("result").innerHTML = "Something went wrong!";
-      const submitBtn = contactForm.querySelector('button');
-            const originalText = submitBtn.textContent;
-            
-            submitBtn.textContent = '✓ something went wrong';
-            submitBtn.style.background = '#ee2626';
-            // Restore button after 3 seconds
-            setTimeout(() => {
-                submitBtn.textContent = originalText;
-                submitBtn.style.background = '';
-            }, 3000);
+        // Post to FormSubmit using the email provided
+        fetch("https://formsubmit.co/daudgafar01@gmail.com", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => {
+            const submitBtn = contactForm.querySelector('button');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+            if (response.ok) {
+                if (submitBtn) {
+                    submitBtn.textContent = '✓ Message Sent Successfully!';
+                    submitBtn.style.background = '#10b981';
+                }
+                document.getElementById("result").innerHTML = "Message sent successfully!";
+                contactForm.reset();
+            } else {
+                if (submitBtn) {
+                    submitBtn.textContent = 'Error sending message';
+                    submitBtn.style.background = '#ee2626';
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.style.background = '';
+                    }, 3000);
+                }
+                document.getElementById("result").innerHTML = "Error sending message.";
+            }
+        })
+        .catch(error => {
+            const submitBtn = contactForm.querySelector('button');
+            const originalText = submitBtn ? submitBtn.textContent : '';
+            if (submitBtn) {
+                submitBtn.textContent = 'Something went wrong';
+                submitBtn.style.background = '#ee2626';
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.style.background = '';
+                }, 3000);
+            }
+            document.getElementById("result").innerHTML = "Something went wrong!";
+        });
+    });
+}
 
-            
-  });
-});
+// Automatically update event card status based on date
+function updateEventCardStatuses() {
+    const monthMap = {
+        jan:0,feb:1,mar:2,apr:3,may:4,jun:5,jul:6,aug:7,sep:8,oct:9,nov:10,dec:11
+    };
+
+    const now = new Date();
+    const cards = document.querySelectorAll('.event-card');
+    cards.forEach(card => {
+        try {
+            const dayEl = card.querySelector('.event-date .day');
+            const monthEl = card.querySelector('.event-date .month');
+            const btn = card.querySelector('.btn');
+            if (!dayEl || !monthEl || !btn) return;
+
+            const day = parseInt(dayEl.textContent.trim(), 10);
+            const monthText = monthEl.textContent.trim().toLowerCase();
+            const monthKey = monthText.slice(0,3);
+            const monthIndex = monthMap[monthKey];
+            if (isNaN(day) || monthIndex === undefined) return;
+
+            // Assume current year
+            const eventDate = new Date(now.getFullYear(), monthIndex, day);
+            const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+            // Clear previous status classes
+            btn.classList.remove('completed', 'today');
+
+            if (eventDate < startOfToday) {
+                // Event has passed
+                btn.textContent = 'Completed';
+                btn.classList.add('completed');
+                card.setAttribute('data-status', 'completed');
+            } else if (eventDate.getFullYear() === startOfToday.getFullYear() && eventDate.getMonth() === startOfToday.getMonth() && eventDate.getDate() === startOfToday.getDate()) {
+                // Event is today
+                btn.textContent = 'Happening Today';
+                btn.classList.add('today');
+                card.setAttribute('data-status', 'today');
+            } else {
+                // Future event
+                if (!/done|complete|completed|upcoming|happening today/i.test(btn.textContent)) {
+                    btn.textContent = 'Upcoming';
+                }
+                card.setAttribute('data-status', 'upcoming');
+            }
+        } catch (e) {
+            // ignore malformed cards
+            console.warn('Error parsing event card date', e);
+        }
+    });
+}
+
+// Run on load (immediately if ready, otherwise on DOMContentLoaded)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateEventCardStatuses);
+} else {
+    updateEventCardStatuses();
+}
 
 function gotoabout(){
     window.location.href="index.html#about";
