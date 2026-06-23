@@ -5,15 +5,18 @@
 }
 
 :root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    --accent-color: #ec4899;
+    /* --primary-color: #6366f1; */
+    /* --secondary-color: #8b5cf6; */
+    /* --accent-color: #ec4899; */
     --dark-bg: #0f172a;
     --light-bg: #f8fafc;
     --text-dark: #1e293b;
     --text-light: #64748b;
     --border-color: #e2e8f0;
     --transition: all 0.3s ease;
+     --primary-color: #22C55E;
+     --secondary-color: #15803D;
+     --accent-color: #4ADE80;
 }
 
 html {
