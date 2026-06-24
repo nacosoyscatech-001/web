@@ -1168,3 +1168,57 @@ body {
     font-size: 2.2rem;
     cursor: pointer;
 }
+
+/* ===== IMAGE LOADING EFFECT ===== */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    background: var(--light-bg);
+}
+
+.image-wrapper img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.image-wrapper img.loaded {
+    opacity: 1;
+}
+
+/* Skeleton Loader */
+.image-skeleton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        var(--light-bg) 0%,
+        rgba(255, 255, 255, 0.2) 20%,
+        var(--light-bg) 40%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-skeleton.fade-out {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
