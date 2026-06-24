@@ -8,6 +8,50 @@ if (hamburger) {
     });
 }
 
+// ===== IMAGE LOADING EFFECT =====
+// Initialize image loading effect for all images with wrapper
+function initImageLoadingEffect() {
+    const imageWrappers = document.querySelectorAll('.image-wrapper');
+    
+    imageWrappers.forEach(wrapper => {
+        const img = wrapper.querySelector('img');
+        const skeleton = wrapper.querySelector('.image-skeleton');
+        
+        if (img && skeleton) {
+            // Check if image is already cached/loaded
+            if (img.complete) {
+                img.classList.add('loaded');
+                skeleton.classList.add('fade-out');
+            } else {
+                // Add load event listener
+                img.addEventListener('load', () => {
+                    img.classList.add('loaded');
+                    skeleton.classList.add('fade-out');
+                });
+                
+                // Handle error case
+                img.addEventListener('error', () => {
+                    skeleton.classList.add('fade-out');
+                });
+            }
+        }
+    });
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', initImageLoadingEffect);
+
+// Also initialize for dynamically loaded images
+const imageMutationObserver = new MutationObserver(() => {
+    initImageLoadingEffect();
+});
+
+imageMutationObserver.observe(document.body, {
+    childList: true,
+    subtree: true
+});
+
+
 // Close menu when a nav link is clicked
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
